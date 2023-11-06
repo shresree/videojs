@@ -13,8 +13,9 @@ var skip = document.getElementById("skip");
 var mute = document.getElementById("mute");
 var slider = document.getElementById("slider");
 var info = document.getElementById("volumeInfo");
-
-
+var vintage = document.getElementById("vintage");
+var orig = document.getElementById("orig");
+video.
 pause.addEventListener("click", function () {
     video.pause();
 });
@@ -52,20 +53,14 @@ slider.addEventListener("input", function () {
     video.volume = volumeSlider.value;
     volumeInfo.textContent = "Volume: " + (volumeSlider.value * 100).toFixed(0) + "%";
 });
+vintage.addEventListener("click", function () {
+	video.classList.add("oldSchool");
+});
 
-// To remove the 'oldSchool' class
-function removeOldSchool() {
-    video.classList.remove("vintage");
-}
+original.addEventListener("click", function () {
+	video.classList.remove("oldSchool");
+});
 
-// To add the 'oldSchool' class
-function addOldSchool() {
-    video.classList.add("vintage");
-}
-
-// Example usage to remove and add 'oldSchool' class
-removeOldSchool(); // Remove the class
-addOldSchool(); // Add the class
  document.querySelector("#play").addEventListener("click", function() {
  	console.log("Play Video");
  });
