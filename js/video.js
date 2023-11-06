@@ -21,13 +21,15 @@ pause.addEventListener("click", function () {
 });
 
 slow.addEventListener("click", function () {
-    video.playbackRate -= 0.1;
+    video.playbackRate -= 0.2;
     console.log("New Speed: " + video.playbackRate);
+	video.slow();
 });
 
 fast.addEventListener("click", function () {
-    video.playbackRate += 0.1;
+    video.playbackRate += 0.2;
     console.log("New Speed: " + video.playbackRate);
+	video.fast();
 });
 
 skip.addEventListener("click", function () {
@@ -37,6 +39,7 @@ skip.addEventListener("click", function () {
         video.currentTime = 0;
     }
     console.log("Current Time: " + video.currentTime);
+	video.skip();
 });
 
 mute.addEventListener("click", function () {
@@ -47,22 +50,26 @@ mute.addEventListener("click", function () {
         video.muted = true;
         muteButton.textContent = "Unmute";
     }
+	video.mute();
 });
 
 slider.addEventListener("input", function () {
     video.volume = volumeSlider.value;
     volumeInfo.textContent = "Volume: " + (volumeSlider.value * 100).toFixed(0) + "%";
+	video.slider();
 });
 vintage.addEventListener("click", function () {
 	video.classList.add("oldSchool");
+	video.vintage();
 });
 
 original.addEventListener("click", function () {
 	video.classList.remove("oldSchool");
+	video.original();
 });
 
  document.querySelector("#play").addEventListener("click", function() {
  	console.log("Play Video");
-	 video.play();
+	video.play();
  });
 
