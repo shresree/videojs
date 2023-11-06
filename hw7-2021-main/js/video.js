@@ -6,7 +6,7 @@ window.addEventListener("load", function() {
 });
 window.addEventListener("load", function() {
     
-    video = document.querySelector("#play"); 
+    video = document.querySelector("#player1"); 
 
     
     if (video) {
