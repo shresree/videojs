@@ -51,6 +51,7 @@ document.querySelector("#mute").addEventListener("click", function () {
 	console.log("Muted");
     }
 	console.log("Mute status is", video.muted);
+	video.mute();
 });
 
 document.querySelector("#slider").addEventListener("input", function () {
