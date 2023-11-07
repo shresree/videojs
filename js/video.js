@@ -20,13 +20,13 @@ document.querySelector("#pause").addEventListener("click", function () {
 });
 
 document.querySelector("#slower").addEventListener("click", function () {
-    video.playbackRate -= 0.2;
+    video.playbackRate -= 0.1;
     console.log("New Speed: " + video.playbackRate);
 	video.slow();
 });
 
 document.querySelector("#faster").addEventListener("click", function () {
-    video.playbackRate += 0.2;
+    video.playbackRate += 0.1;
     console.log("New Speed: " + video.playbackRate);
 	video.fast();
 });
